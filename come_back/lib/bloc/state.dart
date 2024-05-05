@@ -1,20 +1,30 @@
-import 'package:come_back/model.dart';
 
-abstract class ApiState {
-  List<Product> products;
-  ApiState({this.products = const <Product>[],
-  });
-     
-} // Soyut sınıf
 
-class ApiInitialState extends ApiState {
-  ApiInitialState();
+import 'package:come_back/model/model.dart';
+import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
+
+@immutable
+abstract class ApiState extends Equatable {
+
+} // Abstract class
+
+class ApiLoadingState extends ApiState{
+  @override
+  List<Object?> get props => [];
 }
 
-//emit dediğimizde kullanılacak state //it ite buyurur it de kutruğuna
-
-class ApiDataProductState extends ApiState {
-  ApiDataProductState(List<Product> products)
-      : super(products: products);
+class ApiLoadedState extends ApiState {
+  ApiLoadedState(this.products);
+  final List<Product> products;
+  @override
+  List<Object?> get props => [products];
 }
 
+class ApiErrorState extends ApiState {
+  final String error;
+  ApiErrorState(this.error);
+
+  @override
+  List<Object?> get props => [error];
+}
