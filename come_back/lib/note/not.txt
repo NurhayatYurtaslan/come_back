@@ -1,0 +1,22 @@
+API, Application Programming Interface (Uygulama Programlama Arayüzü) kavramının kısaltmasıdır. 
+Bir yazılımın başka bir yazılım tarafından kullanılabilmesi için sunduğu belirli bir arayüzdür. 
+API, yazılımlar arasında iletişim kurmak, 
+veri alışverişi yapmak veya belirli işlevleri kullanmak için tanımlanmış bir dizi protokol ve kuralları içerir.
+
+REST (Representational State Transfer), web servislerinin tasarım prensiplerini tanımlayan bir mimari stilidir. RESTful API, bu prensiplere uygun olarak tasarlanan bir API'yi ifade eder. RESTful API, HTTP protokolünü kullanarak kaynakları (resources) temsil eden URL'ler üzerinden erişilebilir hale getiren bir yapıya sahiptir. Bu API, genellikle JSON veya XML gibi veri formatlarını kullanarak istemci ve sunucu arasında veri alışverişi yapar.
+
+HTTP (Hypertext Transfer Protocol), web tarayıcıları ve sunucular arasında iletişim kurmak için kullanılan bir protokoldür. İstemci (genellikle web tarayıcısı), sunucuya HTTP talepleri gönderir ve sunucu da bu taleplere yanıt verir. HTTP, web sayfalarının aktarımında kullanılan yaygın bir protokoldür.
+
+HTTPS (Hypertext Transfer Protocol Secure), HTTP protokolünün güvenli bir versiyonudur. HTTPS, verilerin şifrelenmesi ve güvenli bir şekilde iletilmesi için SSL (Secure Sockets Layer) veya TLS (Transport Layer Security) protokolünü kullanır. Bu, iletişimin gizliliğini ve bütünlüğünü sağlar, bu nedenle hassas bilgilerin (örneğin kredi kartı bilgileri veya giriş kimlikleri) güvenli bir şekilde iletilmesini sağlar.
+
+GET, POST, PUT ve DELETE, HTTP protokolünde kullanılan yaygın HTTP yöntemleridir:
+
+GET: Bir kaynağın okunmasını istemek için kullanılır. Örneğin, bir web tarayıcısı bir web sayfasını getirirken GET isteği gönderir.
+
+POST: Bir kaynağa veri göndermek veya bir kaynağı oluşturmak için kullanılır. Örneğin, bir web formu aracılığıyla bir formun içeriğini sunucuya göndermek için POST isteği kullanılır.
+
+PUT: Bir kaynağı güncellemek için kullanılır. PUT isteği, belirtilen kaynağı verilen verilerle değiştirir.
+
+DELETE: Bir kaynağı silmek için kullanılır. DELETE isteği, belirtilen kaynağı sunucudan kaldırır.
+
+Bu HTTP yöntemleri, RESTful API'lerde kaynakların üzerinde gerçekleştirilebilecek işlemleri temsil eder. Örneğin, bir RESTful API kullanarak bir kullanıcı kaydı oluşturmak için POST, bir kullanıcıyı güncellemek için PUT veya bir kullanıcıyı silmek için DELETE işlemi gerçekleştirilebilir. GET yöntemi ise kaynakların okunması için kullanılır.
