@@ -19,7 +19,7 @@ class ProductView extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 220, 165, 165),
-          titleTextStyle: TextStyle(
+          titleTextStyle: const TextStyle(
             color: Color.fromARGB(255, 110, 75, 175),
             fontSize: 25,
           ),
