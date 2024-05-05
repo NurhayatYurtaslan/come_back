@@ -17,6 +17,12 @@ class ProductView extends StatelessWidget {
       )..add(LoadingApiEvent()),
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: const Color.fromARGB(255, 220, 165, 165),
+          titleTextStyle: TextStyle(
+            color: Color.fromARGB(255, 110, 75, 175),
+            fontSize: 25,
+          ),
           title: const Text('Product List'),
         ),
         body: BlocBuilder<ApiViewModel, ApiState>(
@@ -38,9 +44,26 @@ class ProductView extends StatelessWidget {
                       width: 80,
                       height: 80,
                     ),
-                    title: Text(product.title),
-                    subtitle: Text(product.category),
-                    trailing: Text('\$${product.price.toStringAsFixed(2)}'),
+                    title: Text(
+                      product.title,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                      product.category,
+                      style: const TextStyle(
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                    trailing: Text(
+                      '\$${product.price.toStringAsFixed(2)}',
+                      style: TextStyle(
+                        color: product.price < 100
+                            ? Colors.green
+                            : (product.price >= 100 && product.price <= 500)
+                                ? Colors.orange
+                                : Colors.red,
+                      ),
+                    ),
                   );
                 },
               );
@@ -49,7 +72,7 @@ class ProductView extends StatelessWidget {
                 ? Center(
                     child: Text(
                       'An error occurred: ${state.error}',
-                      style: TextStyle(color: Colors.red),
+                      style: const TextStyle(color: Colors.red),
                     ),
                   )
                 : Container(); // Added a return statement for error cases.
