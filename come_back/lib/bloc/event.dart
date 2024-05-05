@@ -1,8 +1,15 @@
+
+
+import 'package:come_back/model/model.dart';
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
-abstract class ApiEvent {}
+@immutable
+abstract class ApiEvent extends Equatable {
+  const ApiEvent();
+}
 
-class ApiInitialEvent extends ApiEvent {
-  BuildContext context;
-  ApiInitialEvent(this.context);
+class LoadingApiEvent extends ApiEvent {
+  @override
+  List<Product?> get props => throw UnimplementedError();
 }
